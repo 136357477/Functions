@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self strToNSDate];
     
 }
 #pragma mark - 自己写的一些常用的函数
@@ -94,7 +94,7 @@
 #pragma mark NSString 于 NSDate 之间的转换
 - (void)strToNSDate{
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    NSTimeZone *timeZone = [NSTimeZone localTimeZone];
+    NSTimeZone *timeZone = [NSTimeZone localTimeZone];//当地时区
     [formatter setTimeZone:timeZone];
     [formatter setDateFormat:@"yyyy-M-d H:m:s"];
     
