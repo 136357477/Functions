@@ -36,6 +36,8 @@
     NSString *result;
     if (timeInterval < 60) {
         result = [NSString stringWithFormat:@"刚刚"];
+        
+        
     }
     else if((temp = timeInterval/60) <60){
         result = [NSString stringWithFormat:@"%ld分前",temp];
